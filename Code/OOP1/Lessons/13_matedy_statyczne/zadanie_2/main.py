@@ -1,6 +1,6 @@
 from shop.apple import Apple
 from shop.potato import Potato
-from shop.order import generate_order
+from shop.order import Order
 
 
 def run_homework():
@@ -9,9 +9,9 @@ def run_homework():
     # print(f'10 kg małych jabłek kosztuje: {small_apple.calculate_price(10)}')
     # print(f'24 kg młodych ziemniaków kosztuje: {fresh_potato.calculate_price(24)}')
 
-    first_order = generate_order()
+    first_order = Order.generate_order()
     first_order.__str__()
-    second_order = generate_order()
+    second_order = Order.generate_order()
     second_order.__str__()
 
     # green_apple = Apple(species_name="Green", size="M", price=3.5)

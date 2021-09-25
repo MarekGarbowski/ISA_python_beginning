@@ -41,8 +41,8 @@ class Order:
         print("=" * 20)
         print()
 
-    @staticmethod
-    def generate_order():
+    @classmethod
+    def generate_order(cls):
         number_of_product = random.randint(1, Order.MAX_ORDER_ELEMENTS)
         order_elements = []
         for product_number in range(number_of_product):

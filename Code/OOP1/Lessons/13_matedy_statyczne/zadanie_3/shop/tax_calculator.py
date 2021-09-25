@@ -7,10 +7,12 @@ class TaxCalculator:
     def __init__(self, item, group):
         self.item = item
         self.group = group
+        self.tax_rate = 0
 
         if group == "FRUITS_AND_VEGGIES":
-            return item * (1 + TaxCalculator.FRUITS_AND_VEGGIES)
-        if group == 'FOOD':
-            return item * (1 + TaxCalculator.FOOD)
+            tax_rate = item * (1 + TaxCalculator.FRUITS_AND_VEGGIES)
+        elif group == 'FOOD':
+            tax_rate = item * (1 + TaxCalculator.FOOD)
         else:
-            return item * (1 + TaxCalculator.OTHER)
+            tax_rate = item * (1 + TaxCalculator.OTHER)
+        return tax_rate
